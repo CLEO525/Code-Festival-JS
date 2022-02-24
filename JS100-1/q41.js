@@ -11,11 +11,11 @@ const rl = readline.createInterface({
 
 
 rl.question('숫자: ', (num) => {
-  function prime(num) {
+  function prime(num) { 
     if(num === 1) {
-      console.log('NO');
-      return;
-    }  
+    console.log('NO');
+    return;
+  }
     for(let i = 2; i < num; i++) {
       const output = num % i;
       if(output === 0) {
