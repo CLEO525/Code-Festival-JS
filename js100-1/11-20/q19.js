@@ -8,8 +8,11 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question('수를 입력하세요 :', (a,b) => {
-  console.log(`${Math.pow(a,b)}`);
+rl.question('수를 입력하세요 :', (nums) => {
+  let num = nums.split(' ');
+  let a = num[0];
+  let b = num[1];
+  console.log(Math.pow(a,b))
   rl.close();
 });
 

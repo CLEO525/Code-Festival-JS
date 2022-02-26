@@ -9,12 +9,19 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question('점수 : ', (a, b, c) => {
-  function getAverage(a, b, c) {
-    let output = '';
-    output = (a + b + c) / 3;
-    return output;
+rl.question('점수 : ', (a) => {
+  function getAverage(a) {
+    let output = 0;
+    let result = a.split(' ');
+    // for transfer
+    // output = (Number(result[0]) + Number(result[1]) + Number(result[2]) ) / 3;
+    for(let i = 0; i < 3; i++){
+      output += Number(result[i]);
+    }
+
+    
+    return output / 3;
   }  
-  console.log(`평균 : ${Math.floor(getAverage(a, b, c))}`);
+  console.log(`평균 : ${Math.floor(getAverage(a))}`);
   rl.close();
 });

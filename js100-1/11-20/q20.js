@@ -8,8 +8,12 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-rl.question('입력 :', (num1,num2) => {
-  output = num2 / num1;
-  console.log(`${output}`);
+rl.question('숫자 입력 :', (nums) => {
+  let num = nums.split(' ');
+  let a = num[0];
+  let b = num[1];
+  let output = Math.floor(a / b);
+  let left= a % b;  
+  console.log(`몫과 나머지: ${output} ${left}`);
   rl.close();
 });
