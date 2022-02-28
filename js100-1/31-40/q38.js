@@ -29,7 +29,6 @@ rl.question('학생 점수 : ', (num) => {
     }
     buyCandy += 1;
   }
-  console.log()
   console.log(buyCandy);
   rl.close();
 });
