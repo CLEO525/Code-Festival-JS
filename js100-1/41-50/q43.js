@@ -14,7 +14,7 @@ rl.question('숫자입력: ', (num) => {
   let output = "";
   while (num) {
     arr.push(num % 2);
-    num = parseInt(num / 2, 10)
+    num = parseInt(num / 2, 10) // Number, Int
   }
   arr.reverse();
   arr.forEach((num) => {
