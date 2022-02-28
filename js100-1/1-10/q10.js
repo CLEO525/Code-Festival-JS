@@ -12,15 +12,16 @@ rl.question('입력', (SIZE) => {
   let star = '';
   let size = Number(SIZE);
 
-  for (let i = 0; i < size; i++) {
-    for (let j = size; j > i; j--) {
-        star += ' ';
+  for(let i = size; i > 0; i--) {
+    for(let j = i; j <= 2 * size - 1; j++) {
+        if(j < i * 2 - 1) {
+            star += ' ';
+        } else {
+            star += '*';
+        }
     }
-    for (let k = 0; k <= (i * 2); k++) {
-        star += '*';
-    }
-    star += '\n';
-}
+    star +='\n';
+  }
 console.log(star);
   rl.close();
 });
